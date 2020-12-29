@@ -1,0 +1,559 @@
+/* CSS Header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+.header .navbar-nav {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+.header .nav-link::after {
+  content: "";
+  /* cho display :block để chỉnh chiệu rộng mặc định của after và befor là inline */
+  display: block;
+  width: 0;
+  height: 0.15rem;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  box-shadow: 0 0 20px 0 #fbbd61;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  transition: all 0.5s;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  background: linear-gradient(to bottom, #fbbd61, #ec7532) !important;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+
+.header .nav-link:hover::after,
+.header .nav-link.active::after {
+  width: 100%;
+}
+/* END CSS HEADER */
+/* CAROUSEL CSS */
+.slider .carousel-caption > span {
+  font-size: 0.875rem;
+  color: #fbbd61;
+  letter-spacing: 2px;
+}
+.slider .carousel-caption {
+  left: 50%;
+  top: 50%;
+  /* bỏ bottom đi */
+  bottom: initial;
+  /* canh giua item đã có positon */
+  transform: translate(-50%, -50%);
+}
+.slider .carousel-caption h1 {
+  font-size: 3.25rem;
+}
+.slider .carousel-caption p {
+  font-size: 1.125rem;
+}
+.slider .carousel-caption .trailer span {
+  text-align: center;
+  line-height: 2.8rem;
+  border-width: 2px !important;
+  width: 3rem;
+  height: 3rem;
+  font-weight: 300;
+}
+.slider .carousel-caption .trailer button {
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  box-shadow: none;
+  border-radius: 9000px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 0.7rem 2rem;
+  transition: all 0.4s;
+  position: relative;
+}
+/*  */
+.slider .carousel-item {
+  height: 800px;
+}
+
+.slider .item-1 {
+  background: url(../images/hero-1.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider .item-2 {
+  background: url(../images/hero-2.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider .item-3 {
+  background: url(../images/hero-3.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider .carousel-item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000000, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* END CAROUSEL CSS */
+/* NEW IN CSS */
+
+.new .container > h1 {
+  color: #ec7532;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-size: 1.25rem;
+}
+.new .container > h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 140px;
+  height: 3px;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+}
+
+.new .item .img {
+  border-radius: 0.75rem;
+}
+.new .item .img .info {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: all 0.4s;
+}
+.new .item .img:hover .info {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.new .item .img .info i {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-width: 4px !important;
+}
+.new .item .img::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, #fbbd61, #ec7532);
+  position: absolute;
+  top: 0;
+  left: -12.5rem;
+  transform: skewX(35deg);
+  transition: all 0.4s;
+  opacity: 0.9;
+}
+.new .item .img:hover::before {
+  width: 300%;
+}
+/* .new .container .title {
+  font-size: 100px;
+} */
+
+.new .item h1 {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.new .item .rating i {
+  color: #fbbd61;
+  font-size: 0.875rem;
+}
+
+/* END NEW IN CSS */
+/* SCHEDULE CSS */
+.schedule {
+}
+.schedule .nav-tabs .nav-link {
+  position: relative;
+  color: #4a4a4a;
+  padding: 10px 30px;
+  font-size: 1.25rem;
+  /* font-weight: 500; */
+}
+.schedule .nav-tabs .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  background: linear-gradient(to bottom, #fbbd61, #ec7532) !important;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+.schedule .nav-tabs .nav-link.active,
+.schedule .nav-tabs .nav-link.active::after {
+  text-decoration: underline;
+  color: #ec7532;
+  width: 100%;
+}
+.schedule .nav-tabs .nav-link.active:hover {
+  text-decoration: none;
+}
+.schedule .nav-tabs .nav-link:hover::after {
+  width: 100%;
+}
+.schedule .nav-tabs .nav-link.show,
+.nav-tabs .nav-link.active,
+.showtimes .nav-tabs .nav-link:hover {
+  border: white;
+}
+.schedule .container img {
+  /* width: 150px;
+  height: 200px; */
+  width: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+.schedule .container .title {
+  font-size: 1rem;
+  color: #ec7532;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.schedule .container .name {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.schedule .container .content a {
+  color: #ec7532;
+}
+.schedule .container .view-left h1 {
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+.container .viewtime .view-left button {
+  background-color: #ccc;
+  margin: 0 5px;
+}
+.container .viewtime .btn.active {
+  background-color: rgb(248, 244, 244);
+}
+.schedule .container .view-right > span {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+}
+.schedule .container .row {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
+}
+.schedule .container .row:last-child {
+  border-bottom: none;
+}
+/* CSS COMING SOON */
+.coming {
+  padding-top: 80px;
+  background: url(../images/hero-3.jpg) center center no-repeat;
+  background-size: cover;
+}
+.coming .container > h1 {
+  box-sizing: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 25px 0;
+
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+}
+.coming .container .line::after {
+  width: 140px;
+  bottom: -1px;
+}
+.coming-detail > span {
+  color: #ec7532;
+}
+.coming-detail .star > i {
+  color: #fbbd61;
+}
+.coming-detail .star span {
+  margin-left: 0.625rem;
+}
+.coming-detail a {
+  color: #ec7532;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  letter-spacing: 2px;
+}
+.coming-detail a:hover {
+  color: #fbbd61;
+  transition: 0.5s;
+}
+.coming-right img {
+  width: 100%;
+}
+.coming-right i {
+  position: absolute;
+  display: block;
+  height: 85px;
+  width: 85px;
+  line-height: 85px;
+  text-align: center;
+  align-items: center;
+  border: 2px solid #ec7532;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all 0.4s;
+  font-size: 1.8rem;
+}
+.coming-right i:hover {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.comming-list {
+  background-color: #101010;
+  padding: 5rem 0;
+  text-align: center;
+}
+.comming-list .item img {
+  width: 100%;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+.comming-list h1 {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.comming-list span {
+  color: #4a4a4a;
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+.comming-list .item.active {
+  opacity: 1;
+}
+.comming-list .item {
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.comming-list .item:hover {
+  opacity: 1;
+}
+
+/* END CSS COMING SOON */
+/* .schedule .container .content p {
+=
+} */
+/* END SCHEDULE */
+/* .bgRed {
+  background-color: red;
+  height: 100px;
+}
+.bgBlue {
+  background-color: blue;
+  height: 100px;
+} */
+/* CSS CONTACT */
+/* .contact {
+  margin-top: 80px;
+  padding: 80px 0;
+} */
+.contact p {
+  font-size: 1.25rem;
+  word-spacing: 3px;
+}
+.contact h1 {
+  color: #ec7532;
+  font-weight: 400;
+}
+/* css FOOTER */
+.footer {
+  background-color: #000000;
+}
+.footer .container h1 {
+  font-size: 1rem;
+  color: #ec7532;
+  margin-bottom: 2rem;
+}
+
+.footer .container a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  font-size: 0.8125rem;
+}
+/* .footer .container a:hover,
+.footer .container i:hover {
+  color: #fbbd61;
+} */
+
+.footer .container a:hover {
+  color: #fbbd61;
+}
+
+.footer i {
+  margin-right: 10px;
+  width: 15px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer .footer-copyright p {
+  color: #ffffff;
+  font-size: 0.8125rem;
+}
+.footer .social:hover i,
+.footer .social:hover a {
+  color: #fbbd61;
+}
+.footer .footer-copyright span:hover {
+  color: #ec7532;
+  cursor: pointer;
+}
+/* .footer  {
+  margin-right: 5px;
+} */
+
+/* END CSS FOOTER */
+/* END CSS CONTACT */
+/* Responsive  */
+@media screen and (max-width: 1200px) {
+  /* CSS Reponsive */
+}
+@media screen and (max-width: 992px) {
+  .header .container {
+    max-width: 100%;
+  }
+  .schedule .container {
+    max-width: 100%;
+  }
+  /* .container .viewtime .view-left button {
+    background-color: #ccc;
+    /* margin: 0 5px; */
+  /* padding: 0 !important; */
+  .comming-list .item-none {
+    display: none;
+  }
+  .new .item img {
+    width: 100%;
+  }
+  .new .item {
+    margin-top: 1remx;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    z-index: 10;
+    text-transform: uppercase;
+  }
+
+  .new .container .title {
+    padding-top: 3rem !important;
+    font-size: 1.5rem;
+  }
+  .new .item {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+  .coming .comming-list .col-lg-2 {
+    width: 50%;
+  }
+  /* .col-10 {
+    width: 100%;
+  } */
+
+  /* .slider .carousel-inner .carousel-caption {
+    display: block !important;
+  } */
+  .coming .coming-right img {
+    margin-top: 2rem;
+    padding-right: 0.625rem;
+    width: 100%;
+  }
+  .schedule .container img {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+  .footer .row h1 {
+    margin: 1.5rem 0;
+  }
+  .schedule .col-10 {
+    width: 100%;
+  }
+  .schedule .content .viewtime {
+    flex-wrap: wrap;
+  }
+  .schedule .content .viewtime .view-left {
+    width: 100%;
+  }
+  .schedule .content .viewtime .view-right {
+    width: 100%;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 576px) {
+  .new .container .title {
+    font-size: 1.25rem;
+  }
+  .schedule .nav-tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .schedule .container .tab-content .row .col-2 {
+    width: 100%;
+  }
+  .schedule .container .tab-content .row .col-10 {
+    width: 100%;
+  }
+  /* .schedule .container img {
+    width: 100%;
+    margin-bottom: 1rem;
+  } */
+  /* .schedule .nav-tabs .nav-link::after {
+    transform: skewY(1);
+  } */
+
+  .coming .comming-list .item {
+    padding-bottom: 2rem;
+  }
+
+  .new .container .item {
+    padding-bottom: 1rem;
+  }
+  .new .container img {
+    width: 100%;
+  }
+  .coming .comming-list .col-lg-2 {
+    width: 100%;
+  }
+  .schedule .container img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .schedule .content .viewtime .view-left > span {
+    display: block;
+  }
+  .schedule .content .viewtime .view-left > button {
+    margin: 1rem 0;
+  }
+  .schedule .content .viewtime .view-right {
+    text-align: left;
+  }
+}
